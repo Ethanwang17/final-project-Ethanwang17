@@ -4,7 +4,7 @@
 
 **Why are you interested in the field/domain?**
 
-We are interested in areas of health because it can characteristics of healthy individuals as well as their lifestyles. Health is currently one of the more relevant topics since we are in the midst of a pandemic. We want to explore trends of diseases beyond covid such as physical and mental health ie heart failures and stress. If possible, we can also compare different diets between different countries to identify correlations.
+We are interested in areas of health because it contains characteristics of healthy individuals as well as their lifestyles. Health is currently one of the more relevant topics since we are in the midst of a pandemic. We want to explore trends of diseases beyond covid such as physical and mental health ie heart failures and stress. If possible, we can also compare different diets between different countries to identify correlations.
 
 **What other examples of data-driven projects have you found related to this domain (share at least 3)**
 
