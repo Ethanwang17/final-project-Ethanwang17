@@ -10,7 +10,7 @@ We are interested in areas of health because it contains characteristics of heal
 
 [Interactive Summary Health Statistics for Adults](https://wwwn.cdc.gov/NHISDataQueryTool/SHS_adult/index.html) - This interactive website shows the percentage of adults that have certain health problems such as high cholesterol and angina. It only contains data about adults in the US for the year 2019.
 
-[Update on Overall Prevalence of Major Birth Defects](https://www.cdc.gov/mmwr/preview/mmwrhtml/mm5701a2.htm) --- Atlanta, Georgia, 1978--2005) This paper has a table as well as graphs that show the percentage of significant birth defects. The graph shows the trend of it over the years 1978 to 2005.
+[Update on Overall Prevalence of Major Birth Defects](https://www.cdc.gov/mmwr/preview/mmwrhtml/mm5701a2.htm) --- Atlanta, Georgia, 1978--2005 This paper has a table as well as graphs that show the percentage of significant birth defects. The graph shows the trend of it over the years 1978 to 2005.
 
 [National Ambulatory Medical Care Survey](https://www.cdc.gov/nchs/data/ahcd/namcs_summary/2018-namcs-web-tables-508.pdf): 2018 National Summary This paper has many data tables that focus on visits to physicians in the US. Some examples include data about visitor’s age, gender, and ethnicity.
 
