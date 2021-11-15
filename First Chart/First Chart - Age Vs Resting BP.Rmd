@@ -1,0 +1,22 @@
+---
+title: "First Chart - Age vs. Resting BP"
+author: "Hung Tran"
+date: "11/14/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r include=FALSE}
+library("knitr")
+source("~/Documents/final-project-Ethanwang17/First Chart/First Chart.R")
+```
+
+## Chart 1
+
+```{r pressure, echo=FALSE}
+ggplot(heart_df) +
+  geom_point(mapping = aes(x = Age, y = RestingBP)) +
+  labs(x = "Age", y = "Resting BP", title = "Age Vs Resting BP")
