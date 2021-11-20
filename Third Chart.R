@@ -1,7 +1,6 @@
 library(tidyverse)
 library(ggplot2)
-data <- read.csv("https://raw.githubusercontent.com/
-info201b-2021-aut/final-project-Ethanwang17/main/heart.csv?token=AV5GBVXBLQE4CWHY2C2TLRTBUET5S")
+data <- read.csv("heart.csv")
 
 theme_update(plot.title = element_text(hjust = 0.5))
 

@@ -1,5 +1,5 @@
-heart_df <- read.csv("/Users/ethan/Downloads/heart.csv")
-
+heart_df <- read.csv("heart.csv")
+library(ggplot2)
 
 chol_vs_restbp <- heart_df %>%
   select(Cholesterol, RestingBP) %>%
