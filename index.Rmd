@@ -40,6 +40,7 @@ heart_plot
 chol_vs_restbp
 ```
 
+The line graph show the comparison of cholesterol level compared to the resting blood pressure. The purpose of this chart is too is identify the correlation of cholesterol and resting blood pressure. For this data set we found that cholesterol did not have a big correlation with resting blood pressure. Using the line chart we can see as the cholesterol changed the resting blood pressure stayed pretty consistent. The resting blood pressure ranged from about 100 - 200 but did not not depend on the cholesterol level of the patient.
 
 ### Chart 3
 ``` {r echo = FALSE}
