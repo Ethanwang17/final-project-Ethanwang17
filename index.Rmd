@@ -36,7 +36,7 @@ For this analysis, we decided to focus on heart disease as cardiovascular diseas
 ## Summary Paragraph 
 _Write a summary paragraph that includes information calculated by your summary information function_
 
-
+The data set we are working with has 12 columns/observations that show different health characteristics and 918 rows/features/participants. The average and median age is both around 54 years old. However, there are more males than females within this data set with for every male there is about 4 males as seen with `$male_female_ratio`. Out of the 918 rows/participahnts, 508 participants have a health disease (`$heart_disease_count`) and 371 have exercise angina also known as chest pain during exercise (`$exercise_angina_count`). We wanted to dive deeper into both the heart disease and exercise angina groups so we also calculated the basic health characteristics such as age, cholesterol, and resting blood pressure.
 
 ``` {r  echo = FALSE}
 summary_info
@@ -45,8 +45,7 @@ summary_info
 ## Aggregated Table and Observations
 _Render your table and **describe pertinent observations** found in it_
 
-We included this table to show the difference in health characteristics of those 
-of the same age and  those who currently have and don't have a heart disease. The table is arranged by age and grouped to those who have or don't have a heart disease which is seen in the `HeartDisease` column where 0 represents the group without a  current heart disease and 1 representing those who do. The next few columns show the average resting blood pressure (`Avg_RestingBP`), average cholesterol (`Avg_Cholesterol`), and average maximum heart rate (`Avg_Max_HR`). We averaged and grouped these columns to show the difference in these health characteristics so that we can see how those of the same age but with different heart conditions differ. From this we found that depending on the age, these characteristics are all lower or higher, or some characteristics are lower or higher. From this, we can choose a specific age range to help predict heart disease based on these characteristics. 
+We included this table to show the difference in health characteristics of those  of the same age and  those who currently have and don't have a heart disease. The table is arranged by age and grouped to those who have or don't have a heart disease which is seen in the `HeartDisease` column where 0 represents the group without a  current heart disease and 1 representing those who do. The next few columns show the average resting blood pressure (`Avg_RestingBP`), average cholesterol (`Avg_Cholesterol`), and average maximum heart rate (`Avg_Max_HR`). We averaged and grouped these columns to show the difference in these health characteristics so that we can see how those of the same age but with different heart conditions differ. From this we found that depending on the age, these characteristics are all lower or higher, or some characteristics are lower or higher. From this, we can choose a specific age range to help predict heart disease based on these characteristics. 
 
 ``` {r  echo = FALSE}
 summary_table
@@ -56,25 +55,24 @@ summary_table
 ## Charts
 
 ### Chart 1
+
+The graph shown below was used to demonstrate the correlation between age and resting bp. By using a scatter plot it is easier for the viewer to visualize the distribution of resting bp among the different ages. From the graph, you can see that as you get older there is no noticeable difference between the resting bp and the age with an exception of an outlier at age 70 where the resting bp is 0. 
+
 ``` {r  echo = FALSE}
 heart_plot
 ```
 
-The graph shown below was used to demonstrate the correlation between age and resting bp. By using a scatter plot it is easier for the viewer to visualize the distribution of resting bp among the different ages. From the graph, you can see that as you get older there is no noticeable difference between the resting bp and the age with an exception of an outlier at age 70 where the resting bp is 0. 
-
 
 ### Chart 2
+
+The line graph show the comparison of cholesterol level compared to the resting blood pressure. The purpose of this chart is too is identify the correlation of cholesterol and resting blood pressure. For this data set we found that cholesterol did not have a big correlation with resting blood pressure. Using the line chart we can see as the cholesterol changed the resting blood pressure stayed pretty consistent. The resting blood pressure ranged from about 100 - 200 but did not not depend on the cholesterol level of the patient.
+
 ``` {r echo = FALSE}
 chol_vs_restbp
 ```
 
-The line graph show the comparison of cholesterol level compared to the resting blood pressure. The purpose of this chart is too is identify the correlation of cholesterol and resting blood pressure. For this data set we found that cholesterol did not have a big correlation with resting blood pressure. Using the line chart we can see as the cholesterol changed the resting blood pressure stayed pretty consistent. The resting blood pressure ranged from about 100 - 200 but did not not depend on the cholesterol level of the patient.
 
 ### Chart 3
-``` {r echo = FALSE}
-bar_average
-bar_count
-```
 
 The bar graph (bar_average) has the average amount of 
 cholesterol levels for each type of chest pain. The other 
@@ -90,3 +88,10 @@ enough and has enough samples to be considered reliable.
 3 of the chest pain types had well more than 100 cases; 
 however, it is worth noting that TA had a relatively 
 small sample size of cases (approximately 50). 
+
+``` {r echo = FALSE}
+bar_average
+bar_count
+```
+
+
