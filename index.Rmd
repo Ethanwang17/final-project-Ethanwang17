@@ -15,6 +15,18 @@ source("Second Chart.R")
 source("Third Chart.R")
 ```
 ## Introductory Paragarph
+The overarching theme for this analysis is health. While
+in the midst of a pandemic, it's crucial to understand 
+how to effectively maintain one's health and analyzing 
+trends in health data sets can help individuals with this. 
+These data sets provides insight into both physical and 
+mental health as well as other health topics. The data sets
+chosen focus on health related factors such as mental health, 
+Covid/diet, and heart disease. These data sets can be 
+utilized in order to answer questions such as is there 
+correlations between age and cholesterol levels. In this 
+case, the graphs created were primarily derived from the 
+heart data set. 
 
 
 ## Summary Paragraph 
