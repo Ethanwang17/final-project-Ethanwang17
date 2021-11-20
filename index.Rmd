@@ -47,4 +47,17 @@ bar_average
 bar_count
 ```
 
-The bar graph (bar_average) has the average amount of cholesterol levels for each type of chest pain. The other bar graph (bar_count) shows the frequency of each type of chest pain. The purpose of the first graph is to identify whether there a certain chest pain correlates with significantly high cholesterol levels. For this data set, all 4 chest pains had an average of similar cholesterol levels. Therefore, there was not a significant difference between types of chest pain and cholesterol levels. The bar_count graph can be used to verify that the data set is large enough and has enough samples to be considered reliable. 3 of the chest pain types had well more than 100 cases; however, it is worth noting that TA had a relatively small sample size of cases (approximately 50). 
+The bar graph (bar_average) has the average amount of 
+cholesterol levels for each type of chest pain. The other 
+bar graph (bar_count) shows the frequency of each type of 
+chest pain. The purpose of the first graph is to identify 
+whether there a certain chest pain correlates with 
+significantly high cholesterol levels. For this data set, 
+all 4 chest pains had an average of similar cholesterol levels. 
+Therefore, there was not a significant difference between 
+types of chest pain and cholesterol levels. The bar_count 
+graph can be used to verify that the data set is large 
+enough and has enough samples to be considered reliable. 
+3 of the chest pain types had well more than 100 cases; 
+however, it is worth noting that TA had a relatively 
+small sample size of cases (approximately 50). 
