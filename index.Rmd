@@ -9,14 +9,24 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```{r include = FALSE}
 library(tidyverse)
+source("Table Summary.R")
 source("First Chart/First Chart.R")
 source("Second Chart.R")
+source("Third Chart.R")
 ```
 ## Introductory Paragarph
 
+
 ## Summary Paragraph 
 
+
 ## Summary Table and Observations
+
+### Summary Table
+``` {r  echo = FALSE}
+summary_table
+```
+
 
 ## Charts
 
@@ -32,3 +42,7 @@ chol_vs_restbp
 
 
 ### Chart 3
+``` {r echo = FALSE}
+bar_count
+bar_average
+```
