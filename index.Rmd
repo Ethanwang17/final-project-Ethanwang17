@@ -10,10 +10,12 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r include = FALSE}
 library(tidyverse)
 source("Table Summary.R")
+source("Summary Info.R")
 source("First Chart/First Chart.R")
 source("Second Chart.R")
 source("Third Chart.R")
 ```
+
 ## Introductory Paragarph
 The overarching theme for this analysis is health. While
 in the midst of a pandemic, it's crucial to understand 
@@ -28,13 +30,24 @@ correlations between age and cholesterol levels. In this
 case, the graphs created were primarily derived from the 
 heart data set. 
 
+For this analysis, we decided to focus on heart disease as cardiovascular diseases (CVDs) are the number 1 cause of death globally, taking an estimated 17.9 million lives each year. This dataset is made to help people with CVD help patients know if they have Cardiovascular disease before it’s too late. Data was collected by combining 5 different datasets which were Cleveland, Hungarian, Switzerland, Long Beach VA, Stalog (Heart) Data Set. In total there are 918 observations and 12 features in the dataset. This dataset can help answer our question about how
+
 
 ## Summary Paragraph 
+_Write a summary paragraph that includes information calculated by your summary information function_
 
 
-## Summary Table and Observations
 
-### Summary Table
+``` {r  echo = FALSE}
+summary_info
+```
+
+## Aggregated Table and Observations
+_Render your table and **describe pertinent observations** found in it_
+
+We included this table to show the difference in health characteristics of those 
+of the same age and  those who currently have and don't have a heart disease. The table is arranged by age and grouped to those who have or don't have a heart disease which is seen in the `HeartDisease` column where 0 represents the group without a  current heart disease and 1 representing those who do. The next few columns show the average resting blood pressure (`Avg_RestingBP`), average cholesterol (`Avg_Cholesterol`), and average maximum heart rate (`Avg_Max_HR`). We averaged and grouped these columns to show the difference in these health characteristics so that we can see how those of the same age but with different heart conditions differ. From this we found that depending on the age, these characteristics are all lower or higher, or some characteristics are lower or higher. From this, we can choose a specific age range to help predict heart disease based on these characteristics. 
+
 ``` {r  echo = FALSE}
 summary_table
 ```
@@ -46,6 +59,9 @@ summary_table
 ``` {r  echo = FALSE}
 heart_plot
 ```
+
+The graph shown below was used to demonstrate the correlation between age and resting bp. By using a scatter plot it is easier for the viewer to visualize the distribution of resting bp among the different ages. From the graph, you can see that as you get older there is no noticeable difference between the resting bp and the age with an exception of an outlier at age 70 where the resting bp is 0. 
+
 
 ### Chart 2
 ``` {r echo = FALSE}
