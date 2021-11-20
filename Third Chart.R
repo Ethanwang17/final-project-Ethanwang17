@@ -5,8 +5,7 @@ data <- read.csv("heart.csv")
 theme_update(plot.title = element_text(hjust = 0.5))
 
 average <- group_by(data, ChestPainType) %>%
-  summarize(mean(Cholesterol)) %>%
-  mutate(average)
+  summarize(mean(Cholesterol))
 
 colnames(average) <- c('ChestPainType','AverageCholesterol')
 
