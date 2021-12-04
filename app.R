@@ -12,7 +12,6 @@ ui <- navbarPage("INFO Project",
                           p("")),
 )
                  
-)
 
 navbarPage("INFO Project",
            tabPanel("Plot"),
