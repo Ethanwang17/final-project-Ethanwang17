@@ -10,18 +10,23 @@ heart_df <- read.csv("heart.csv")
 server <- function(input, output) {
   
 # CHART 1  
+  
+  plot_data <- heart_df %>%
+    select(Age, RestingBP, Cholesterol)
+  
+  colnames(plot_data) <- c("Age", "Resting Blood Pressure", "Cholesterol")
+  
   output$plot_1 <- renderPlot({
-    #options(scipen=10000)
+    options(scipen=10000)
     
-    plot_1_data <- heart_df %>%
-      filter(Age >= input$age_range[1] & Age <= input$age_range[2])
+    heart_data <- plot_data %>%
+      filter(Age == input$age_range)
     
-    ggplot(plot_1_data) +
-      geom_point(aes(x = Age, y = RestingBP)) +
-      labs(title = "Age vs Resting BP", 
+    ggplot(heart_data) +
+      geom_line(aes(x = Age, y = .data[[input$category_chart_1]])) +
+      labs(title = paste(input$age_range, "vs", input$category_chart_1), 
            x = "Age", 
-           y = "Resting BP")
-    
+           y = category_chart_1)
   })
 
 # CHART 2

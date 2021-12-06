@@ -28,7 +28,7 @@ ui <- navbarPage("Final Deliverable",
                        selectizeInput(
                          inputId = "category_chart_1",
                          label = "Select a category",
-                         choices = all_age,
+                         choices = c("Age", "Resting Blood Pressure", "Cholesterol"),
                          multiple = FALSE
                        )
 
