@@ -10,7 +10,23 @@ ui <- navbarPage("Final Deliverable",
                           p("The chart 2 tab allows the user to input their age and sex and will return the average resting blood pressure, cholesterol, and max heart rate between those who do and don't have a heart diesease. This tab explains how does the average resting blood pressure, cholesterol, and max heart rate differ between those who do and don't have a heart disease?"),
                           p("The chart 3 tab allows the user to choose the pain type and what they want to compare it to and will be shown a bar chart of their selection. This tabe explains how the different types of chest pain (ASY, ATA, NAP, TA) effect the average cholesterol in a person?")
                           ),
-                 tabPanel("Chart 1"),
+                 tabPanel(
+                   titlePanel("Chart 1"),
+                   sidebarLayout(
+                     sidebarPanel(
+                       selectizeInput(
+                         inputId = "age_type",
+                         label = "Select an Age",
+                         choices = all_age,
+                         multiple = FALSE,
+                       )
+                     ),
+                     mainPanel(
+                       plotOutput("plot_1"),
+                       p("This is why...")
+                     )
+                   )
+                 ),
                  tabPanel("Chart 2"),
                  tabPanel("Chart 3"),
                  tabPanel("Summary",
