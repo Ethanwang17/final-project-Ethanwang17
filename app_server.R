@@ -23,5 +23,19 @@ server <- function(input, output) {
            y = "Resting BP")
     
   })
-  
+
+# CHART 2
+  output$plot_2 <- renderPlot({
+    plot_2_data <- heart_df %>%
+      select(Sex, Cholesterol, RestingBP, MaxHR)
+    
+    colnames(plot_2_data) <- c("Sex", "Cholesterol",
+                               "Resting Blood Pressure", "Max Heart Rate")
+    plot_2_data <- plot_2_data %>%
+      filter(Sex == input$sex)
+    
+    ggplot(plot_2_data) +
+      geom_boxplot(aes(x = Sex,
+                       y = .data[[input$category_chart_2]]))
+  })
 }

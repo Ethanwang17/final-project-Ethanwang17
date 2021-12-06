@@ -26,10 +26,10 @@ ui <- navbarPage("Final Deliverable",
                          value = c(min(heart_df$Age), max(heart_df$Age))
                        ),
                        selectizeInput(
-                         inputId = "category",
-                         label = "Select an category",
+                         inputId = "category_chart_1",
+                         label = "Select a category",
                          choices = all_age,
-                         multiple = FALSE,
+                         multiple = FALSE
                        )
 
                      ),
@@ -46,10 +46,21 @@ ui <- navbarPage("Final Deliverable",
                    "Chart 2",
                    sidebarLayout(
                      sidebarPanel(
-                       
+                       selectInput(
+                         inputId = "sex",
+                         label = "Select a sex to compare", 
+                         choices = c("M", "F")
+                       ),
+                       selectizeInput(
+                         inputId = "category_chart_2",
+                         label = "Select a category",
+                         choices = c("Cholesterol",
+                                     "Resting Blood Pressure", "Max Heart Rate"),
+                         multiple = FALSE
+                       )
                      ),
                      mainPanel(
-                       
+                       plotOutput("plot_2")
                      )
                    )
                  ), #END OF CHART 2 PANEL
