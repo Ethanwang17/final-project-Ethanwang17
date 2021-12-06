@@ -2,7 +2,7 @@ library(shiny)
 library(dplyr)
 library(ggplot2)
 
-source("ui.R")
-source("server.R")
+source("app_ui.R")
+source("app_server.R")
 
 shinyApp(ui, server)
