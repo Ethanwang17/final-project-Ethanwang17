@@ -6,10 +6,6 @@ library(dplyr)
 
 heart_df <- read.csv("heart.csv")
 
-all_age <- heart_df %>%
-  select(Age) %>%
-  unique()
-
 # Define server logic ----
 server <- function(input, output) {
   
@@ -18,7 +14,7 @@ server <- function(input, output) {
     #options(scipen=10000)
     
     plot_1_data <- heart_df %>%
-      filter(Age == input$age_type)
+      filter(Age >= input$age_range[1] & Age <= input$age_range[2])
     
     ggplot(plot_1_data) +
       geom_point(aes(x = Age, y = RestingBP)) +

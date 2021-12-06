@@ -15,15 +15,23 @@ ui <- navbarPage("Final Deliverable",
                  
                  # CHART 1 PANEL
                  tabPanel(
-                   titlePanel("Chart 1"),
+                   "Chart 1",
                    sidebarLayout(
                      sidebarPanel(
+                       sliderInput(
+                         inputId = "age_range",
+                         label = " Input Age Range",
+                         min = min(heart_df$Age),
+                         max = max(heart_df$Age),
+                         value = c(min(heart_df$Age), max(heart_df$Age))
+                       ),
                        selectizeInput(
-                         inputId = "age_type",
-                         label = "Select an Age",
+                         inputId = "category",
+                         label = "Select an category",
                          choices = all_age,
                          multiple = FALSE,
                        )
+
                      ),
                      mainPanel(
                        plotOutput("plot_1"),
@@ -35,8 +43,15 @@ ui <- navbarPage("Final Deliverable",
                  
                  # CHART 2 PANEL
                  tabPanel(
-                   titlePanel("Chart 2")
-                   
+                   "Chart 2",
+                   sidebarLayout(
+                     sidebarPanel(
+                       
+                     ),
+                     mainPanel(
+                       
+                     )
+                   )
                  ), #END OF CHART 2 PANEL
                  
                  
