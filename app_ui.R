@@ -34,7 +34,7 @@ ui <- navbarPage("Final Deliverable",
 
                      ),
                      mainPanel(
-                       plotOutput("plot_1"),
+                       plotlyOutput("plot_1"),
                        p("This is why...")
                        
                      )
@@ -60,7 +60,7 @@ ui <- navbarPage("Final Deliverable",
                        )
                      ),
                      mainPanel(
-                       plotOutput("plot_2")
+                       plotlyOutput("plot_2")
                      )
                    )
                  ), #END OF CHART 2 PANEL

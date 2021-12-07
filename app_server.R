@@ -1,8 +1,4 @@
-library(shiny)
-library(dplyr)
-#library(ggplot2)
-#library(tidyverse)
-#library(plotly)
+
 
 heart_df <- read.csv("heart.csv")
 
@@ -20,7 +16,7 @@ server <- function(input, output) {
   
   colnames(plot_data) <- c("Age", "Resting Blood Pressure", "Cholesterol")
   
-  output$plot_1 <- renderPlot({
+  output$plot_1 <- renderPlotly({
     options(scipen=10000)
     
     heart_data <- plot_data %>%
@@ -34,7 +30,7 @@ server <- function(input, output) {
   })
 
 # CHART 2
-  output$plot_2 <- renderPlot({
+  output$plot_2 <- renderPlotly({
     plot_2_data <- heart_df %>%
       select(Sex, Cholesterol, RestingBP, MaxHR)
     
