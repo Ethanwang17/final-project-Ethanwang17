@@ -6,6 +6,10 @@ library(dplyr)
 
 heart_df <- read.csv("heart.csv")
 
+cat_chart_1 <- heart_df %>%
+  select(RestingBP, Cholesterol) %>%
+  unique()
+
 # Define server logic ----
 server <- function(input, output) {
   
@@ -23,10 +27,10 @@ server <- function(input, output) {
       filter(Age == input$age_range)
     
     ggplot(heart_data) +
-      geom_line(aes(x = Age, y = .data[[input$category_chart_1]])) +
-      labs(title = paste(input$age_range, "vs", input$category_chart_1), 
+      geom_line(aes(x = Age, y = .data[[input$category_chart]])) +
+      labs(title = paste(input$age_range, "vs", input$category_chart), 
            x = "Age", 
-           y = category_chart_1)
+           y = input$category_chart)
   })
 
 # CHART 2
