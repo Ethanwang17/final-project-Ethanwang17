@@ -66,7 +66,16 @@ ui <- navbarPage("Final Deliverable",
                      mainPanel(
                        h3("Bar Plot Comparing different "),
                        p(),
-                       plotlyOutput("plot_2")
+                       plotlyOutput("plot_2"),
+                       p("This is a vertical box and whiskers plot that shows the distriubtion 
+                          for the user's selected variable. In addition, users can select the 
+                          distribution of either males or females." ),
+                       p(),
+                       p(),
+                       h4("So... what does this distribution tell us?"),
+                       p("For cholesterol levels and resting heart rate, males tend to have a slighlty higher median than females. 
+                         However, the median heart rate for males is slightly lower than females. It is also worth noting that
+                         males have more variation since there are more outliers in the male distrubtions for all three variables.")
                      )
                    )
                  ), #END OF CHART 2 PANEL
