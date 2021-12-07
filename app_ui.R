@@ -72,7 +72,23 @@ ui <- navbarPage("Final Deliverable",
                  ), #END OF CHART 2 PANEL
                  
                  
-                 tabPanel("Chart 3"),
+                 tabPanel(
+                   "Chart 3",
+                   sidebarLayout(
+                     sidebarPanel(
+                       selectizeInput(
+                         inputId = "category_chart_3",
+                         label = "Select a category",
+                         choices = c("Average Cholesterol",
+                                     "Average Resting Blood Pressure",
+                                     "Number of People"),
+                         multiple = FALSE)
+                     ),
+                     mainPanel(
+                       plotlyOutput("plot_3")
+                     )
+                   )
+                  ),
                  
                  
                  tabPanel("Summary",

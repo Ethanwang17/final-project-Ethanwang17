@@ -26,6 +26,7 @@ server <- function(input, output) {
     ggplot(heart_data) +
       geom_point(aes(x = Age, y = .data[[input$category_chart]])) +
       labs(title = paste(input$age_range, "vs", input$category_chart), 
+           # so age_range has two outputs causing a warning, i think just Age vs Category should be fine
            x = "Age", 
            y = input$category_chart)
   })
@@ -40,13 +41,38 @@ server <- function(input, output) {
     plot_2_data <- plot_2_data %>%
       filter(Sex == input$sex)
     
+    plot_2_title <- sprintf("Sex's distribution of %s", input$category_chart_2)
+    
     ggplot(plot_2_data) +
       geom_boxplot(aes(x = Sex,
-                       y = .data[[input$category_chart_2]]))
+                       y = .data[[input$category_chart_2]])) +
+      labs(title = plot_2_title,
+           x = "Sex",
+           y = input$category_chart_2)
   })
   
 # CHART 3 - JADEN
   output$plot_3 <- renderPlotly({
+    plot_3_data <- heart_df %>%
+      group_by(ChestPainType) %>%
+      summarise(avgCholesterol = mean(Cholesterol),
+                avgRestingBP = mean(RestingBP),
+                count = n())
+    
+    colnames(plot_3_data) <- c("ChestPainType",
+                               "Average Cholesterol",
+                               "Average Resting Blood Pressure",
+                               "Number of People")
+    plot_3_title <- sprintf("Chest Pain Type Distribution of %s", 
+                            input$category_chart_3)
+    
+    ggplot(plot_3_data) +
+      geom_bar(aes(x = ChestPainType, y = .data[[input$category_chart_3]]),
+               stat = "identity",
+               width=0.35) +
+      labs(title = plot_3_title,
+           x = "Chest Pain Type")
+    
     
   })
 }
