@@ -9,14 +9,15 @@ cat_chart_1 <- heart_df %>%
 # Define server logic ----
 server <- function(input, output) {
   
-# CHART 1  
-  
-  plot_data <- heart_df %>%
-    select(Age, RestingBP, Cholesterol)
-  
-  colnames(plot_data) <- c("Age", "Resting Blood Pressure", "Cholesterol")
+# CHART 1 - HUNG
+
   
   output$plot_1 <- renderPlotly({
+    plot_data <- heart_df %>%
+      select(Age, RestingBP, Cholesterol)
+    
+    colnames(plot_data) <- c("Age", "Resting Blood Pressure", "Cholesterol")
+    
     options(scipen=10000)
     
     heart_data <- plot_data %>%
@@ -29,7 +30,7 @@ server <- function(input, output) {
            y = input$category_chart)
   })
 
-# CHART 2
+# CHART 2 - MATTHEW
   output$plot_2 <- renderPlotly({
     plot_2_data <- heart_df %>%
       select(Sex, Cholesterol, RestingBP, MaxHR)
@@ -42,5 +43,10 @@ server <- function(input, output) {
     ggplot(plot_2_data) +
       geom_boxplot(aes(x = Sex,
                        y = .data[[input$category_chart_2]]))
+  })
+  
+# CHART 3 - JADEN
+  output$plot_3 <- renderPlotly({
+    
   })
 }

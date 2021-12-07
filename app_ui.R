@@ -23,7 +23,8 @@ ui <- navbarPage("Final Deliverable",
                          label = " Input Age Range",
                          min = min(heart_df$Age),
                          max = max(heart_df$Age),
-                         value = c(min(heart_df$Age), max(heart_df$Age))
+                         value = c(min(heart_df$Age), max(heart_df$Age)),
+                         step = 1
                        ),
                        selectizeInput(
                          inputId = "category_chart",
@@ -60,6 +61,8 @@ ui <- navbarPage("Final Deliverable",
                        )
                      ),
                      mainPanel(
+                       h3("Bar Plot Comparing different "),
+                       p(),
                        plotlyOutput("plot_2")
                      )
                    )
