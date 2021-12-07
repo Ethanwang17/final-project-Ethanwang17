@@ -36,7 +36,7 @@ ui <- navbarPage("Final Deliverable",
                      ),
                      mainPanel(
                        h1("Scatter Plot Comparing Age to Resting Blood Pressure or Age to Cholesterol"),
-                       h2("This graph allows users to compare age to health topics (Resting Blood Pressure or Cholesterol) to demonstrate the correlation between the two. Users are able to input their age as well as what health topics they want to analyze. By using a scatter plot, it is easier for the viewer to visualize the distribution of Resting Blood Pressure or Cholesterol among the different ages."),
+                       h2("This graph allows users to compare age to health topics (Resting Blood Pressure or Cholesterol) to demonstrate the correlation between the two. Users can input their age as well as what health topics they want to analyze. By using a scatter plot, it is easier for the viewer to visualize the distribution of Resting Blood Pressure or Cholesterol among the different ages."),
                        plotlyOutput("plot_1"),
                        h1("Any correlations or noticeable difference within this graph?"),
                        h2("From the graph, you can see that as you get older there is no noticeable difference 
