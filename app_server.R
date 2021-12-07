@@ -24,10 +24,10 @@ server <- function(input, output) {
     options(scipen=10000)
     
     heart_data <- plot_data %>%
-      filter(Age == input$age_range)
+      filter(Age >= input$age_range[1] & Age <= input$age_range[2])
     
     ggplot(heart_data) +
-      geom_line(aes(x = Age, y = .data[[input$category_chart]])) +
+      geom_point(aes(x = Age, y = .data[[input$category_chart]])) +
       labs(title = paste(input$age_range, "vs", input$category_chart), 
            x = "Age", 
            y = input$category_chart)
