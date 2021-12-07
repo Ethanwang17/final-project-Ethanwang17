@@ -5,12 +5,12 @@ ui <- navbarPage("Final Deliverable",
                  
                  
                  tabPanel("Introduction",
-                          h1("Summary"),
+                          h1("Summary"  ,  style = "color: Yellow"),
                           p("Health is an essential part of every being and it's important that we humans know how to keep ourselves healthy as good health is critical for one's happieness and well-being. Health is imporatnt as it is essential for keeping our bodies alive and working. This projects goal is to better understand how"),
                           h2("Page Description"),
-                          p("The chart 1 tab is an interactive slider that allows you to filter a range of age groups that shows the resting blood pressure for that rage af ages. This tab explains how the age of a person effects the resting blood pressure of the human body?"),
-                          p("The chart 2 tab allows the user to input their age and sex and will return the average resting blood pressure, cholesterol, and max heart rate between those who do and don't have a heart diesease. This tab explains how does the average resting blood pressure, cholesterol, and max heart rate differ between those who do and don't have a heart disease?"),
-                          p("The chart 3 tab allows the user to choose the pain type and what they want to compare it to and will be shown a bar chart of their selection. This tabe explains how the different types of chest pain (ASY, ATA, NAP, TA) effect the average cholesterol in a person?")
+                          p("The chart 1 tab is an interactive slider that allows you to filter a range of age groups that shows the resting blood pressure for that rage af ages. This tab explains how the age of a person effects the resting blood pressure of the human body?" ,  style = "color: Orange"),
+                          p("The chart 2 tab allows the user to input their age and sex and will return the average resting blood pressure, cholesterol, and max heart rate between those who do and don't have a heart diesease. This tab explains how does the average resting blood pressure, cholesterol, and max heart rate differ between those who do and don't have a heart disease?" ,  style = "color: Orange"),
+                          p("The chart 3 tab allows the user to choose the pain type and what they want to compare it to and will be shown a bar chart of their selection. This tabe explains how the different types of chest pain (ASY, ATA, NAP, TA) effect the average cholesterol in a person?" ,  style = "color: Orange")
                           ),
                  
                  # CHART 1 PANEL
@@ -69,13 +69,13 @@ ui <- navbarPage("Final Deliverable",
                        plotlyOutput("plot_2"),
                        p("This is a vertical box and whiskers plot that shows the distriubtion 
                           for the user's selected variable. In addition, users can select the 
-                          distribution of either males or females." ),
+                          distribution of either males or females." ,  style = "color: Blue" ),
                        p(),
                        p(),
                        h4("So... what does this distribution tell us?"),
                        p("For cholesterol levels and resting heart rate, males tend to have a slighlty higher median than females. 
                          However, the median heart rate for males is slightly lower than females. It is also worth noting that
-                         males have more variation since there are more outliers in the male distrubtions for all three variables.")
+                         males have more variation since there are more outliers in the male distrubtions for all three variables." ,  style = "color: Red")
                      )
                    )
                  ), #END OF CHART 2 PANEL
@@ -94,7 +94,14 @@ ui <- navbarPage("Final Deliverable",
                          multiple = FALSE)
                      ),
                      mainPanel(
-                       plotlyOutput("plot_3")
+                       plotlyOutput("plot_3"),
+                       p("ASY = This bar graph compares the different types of heart pain to the variable that the user selects." ,  style = "color: Pink"),
+                       p(),
+                       h4("Analyzed..."),
+                       p("The findings show that the different types of heart pain have relatively similar average cholesterol 
+                         levels as well average resting blood pressures. However, there is significantly more people that have 
+                         the ASY pain type. Specifically, ASY has roughy 2.5 times the number cases than ATA or NAP. Lastly, 
+                         the TA pain type is the least likely to occur with less than half the number of cases as NAP." ,  style = "color: Green")
                      )
                    )
                   ),
