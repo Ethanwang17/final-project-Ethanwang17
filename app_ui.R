@@ -85,6 +85,7 @@ ui <- navbarPage("Final Deliverable",
                        )
                      ),
                      mainPanel(
+                       h2("Distribution of Health Characteristics by Sex"),
                        p("This box plots shows the distribution of each sex's (Male/Female) distribution of different
                          health characteristics. The user can choose which sex and category they want to display, for example,
                          they can show the male distribution of cholesterol. From this they can see where they fall along compared to out data and
@@ -119,6 +120,7 @@ ui <- navbarPage("Final Deliverable",
                        p("TA = Typical Angina", style = "color: rgb(255,36,36)")
                      ),
                      mainPanel(
+                       h2("Health Characteristics for Different Types of Angina"),
                        p("This bar graph reveals different health information about people who have different types of Angina,
                          also known as, chest pain. Users can choose different health characteristics as well as the number of people
                          within each category to see how it is distrubuted and what the average health characteristics each type of 
