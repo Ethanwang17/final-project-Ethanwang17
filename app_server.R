@@ -23,10 +23,10 @@ server <- function(input, output) {
     heart_data <- plot_data %>%
       filter(Age >= input$age_range[1] & Age <= input$age_range[2])
     
+    plot_1_title <- sprintf("Age vs %s", input$category_chart)
     ggplot(heart_data) +
       geom_point(aes(x = Age, y = .data[[input$category_chart]])) +
-      labs(title = paste(input$age_range, "vs", input$category_chart), 
-           # so age_range has two outputs causing a warning, i think just Age vs Category should be fine
+      labs(title = plot_1_title, 
            x = "Age", 
            y = input$category_chart)
   })
