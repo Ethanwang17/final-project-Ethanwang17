@@ -47,12 +47,12 @@ ui <- navbarPage("Final Deliverable",
 
                      ),
                      mainPanel(
-                       h1("Scatter Plot Comparing Age to Resting Blood Pressure or Age to Cholesterol"),
+                       h2("Scatter Plot Comparing Age to Resting Blood Pressure or Age to Cholesterol"),
                        p("This graph allows users to compare age to health topics (Resting Blood Pressure or Cholesterol) to demonstrate the correlation 
                          between the two. Users can input their age as well as what health topics they want to analyze. By using a scatter plot, it is easier 
                          for the viewer to visualize the distribution of Resting Blood Pressure or Cholesterol among the different ages."),
                        plotlyOutput("plot_1"),
-                       h1("Any correlations or noticeable difference within this graph?"),
+                       h3("Any correlations or noticeable difference within this graph?"),
                        p("From the graph, you can see that as you get older there is no noticeable difference 
                          between the resting bp and the age with an exception of 
                          an outlier at the age of 55 where the resting bp is 0. 
@@ -128,7 +128,7 @@ ui <- navbarPage("Final Deliverable",
                          influence each type.",
                          style = "color: rgb(178,57,61)"),
                        plotlyOutput("plot_3"),
-                       h1("Analyzed..."),
+                       h3("Analyzed..."),
                        p("The findings show that the different types of heart pain have relatively similar average cholesterol 
                          levels as well average resting blood pressures. However, there is significantly more people that have 
                          the ASY pain type. Specifically, ASY has roughy 2.5 times the number cases than ATA or NAP. Lastly, 
