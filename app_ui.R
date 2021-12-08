@@ -6,7 +6,7 @@ ui <- navbarPage("Final Deliverable",
                    "Introduction",
                    sidebarLayout(
                      sidebarPanel(
-                       tags$img(src="https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/articles/health_tools/rise_above_heart_failure_slideshow/1800ss_getty_rf_heart.jpg?resize=650px:*", height="100%", width="100%", align="right"),
+                       tags$img(src="https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/articles/health_tools/rise_above_heart_failure_slideshow/1800ss_getty_rf_heart.jpg?resize=650px:*", height="100%", width="100%"),
                      ),
                      mainPanel(
                        h1("Summary"  ,  style = "color: rgb(178,57,61)"),
