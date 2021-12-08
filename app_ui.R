@@ -2,28 +2,62 @@ library(shiny)
 
 # Define UI ----
 ui <- navbarPage("Final Deliverable",
-                 
-                 
-                 tabPanel("Introduction",
-                          h1("Summary"  ,  style = "color: rgb(178,57,61)"),
-                          p("Health is an essential part of every being and it's important that we humans know 
-                            how to keep ourselves healthy as good health is critical for one's happieness and well-being. 
-                            Health is imporatnt as it is essential for keeping our bodies alive and working. 
-                            This projects goal is to better understand how"),
-                          h1("Page Description", style = "color: rgb(178,57,61)"),
-                          p("The chart 1 tab is an interactive slider that allows you to filter a range of age groups that shows 
+                 tabPanel(
+                   "Introduction",
+                   sidebarLayout(
+                     sidebarPanel(
+                       tags$img(src="https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/articles/health_tools/rise_above_heart_failure_slideshow/1800ss_getty_rf_heart.jpg?resize=650px:*", width = "550 px"),
+                     ),
+                     mainPanel(
+                       h1("Summary"  ,  style = "color: rgb(178,57,61)"),
+                       p("The overarching theme for this analysis is health. While in the midst of a pandemic, it’s crucial to understand how 
+                       to effectively maintain one’s health and analyzing trends in health data sets can help individuals with this. These data 
+                       sets provides insight into both physical and mental health as well as other health topics. The data sets chosen focus on 
+                       health related factors such as mental health, Covid/diet, and heart disease. These data sets can be utilized in order to 
+                       answer questions such as is there correlations between age and cholesterol levels. In this case, the graphs created were 
+                       primarily derived from the heart data set."),
+                       p("For this project, we decided to focus on heart disease as cardiovascular diseases (CVDs) are the number 1 cause of 
+                         death globally, taking an estimated 17.9 million lives each year. This dataset is made to help people with CVD help 
+                         patients know if they have Cardiovascular disease before it’s too late. Data was collected by combining 5 different 
+                         datasets which were Cleveland, Hungarian, Switzerland, Long Beach VA, Stalog (Heart) Data Set. In total there are 918 
+                         observations and 12 features in the dataset."),
+                       h1("Chart Outline", style = "color: rgb(178,57,61)"),
+                       p("The scatter plot tab is an interactive slider that allows you to filter a range of age groups that shows 
                             the resting blood pressure for that rage af ages. This tab explains how the age of a person effects the 
                             resting blood pressure of the human body?" ,
-                            style = "color: rgb(41,41,41)"),
-                          p("The chart 2 tab allows the user to input their age and sex and will return the average resting blood pressure, 
+                         style = "color: rgb(41,41,41)"),
+                       p("The box plot tab allows the user to input their age and sex and will return the average resting blood pressure, 
                             cholesterol, and max heart rate between those who do and don't have a heart diesease. 
                             This tab explains how does the average resting blood pressure, cholesterol, and max heart rate differ between those who 
                             do and don't have a heart disease?" ,
-                            style = "color: rgb(41,41,41)"),
-                          p("The chart 3 tab allows the user to choose the pain type and what they want to compare it to and will be shown a bar chart 
+                         style = "color: rgb(41,41,41)"),
+                       p("The bar chart tab allows the user to choose the pain type and what they want to compare it to and will be shown a bar chart 
                             of their selection. This tabe explains how the different types of chest pain (ASY, ATA, NAP, TA) effect the average cholesterol in a person?" ,
-                            style = "color: rgb(41,41,41)")
-                          ),
+                         style = "color: rgb(41,41,41)")
+                     )
+                   )
+                 ),
+                 
+                 # tabPanel("Introduction",
+                 #          h1("Summary"  ,  style = "color: rgb(178,57,61)"),
+                 #          p("Health is an essential part of every being and it's important that we humans know 
+                 #            how to keep ourselves healthy as good health is critical for one's happieness and well-being. 
+                 #            Health is imporatnt as it is essential for keeping our bodies alive and working. 
+                 #            This projects goal is to better understand how"),
+                 #          h1("Chart Outline", style = "color: rgb(178,57,61)"),
+                 #          p("The scatter plot tab is an interactive slider that allows you to filter a range of age groups that shows 
+                 #            the resting blood pressure for that rage af ages. This tab explains how the age of a person effects the 
+                 #            resting blood pressure of the human body?" ,
+                 #            style = "color: rgb(41,41,41)"),
+                 #          p("The box plot tab allows the user to input their age and sex and will return the average resting blood pressure, 
+                 #            cholesterol, and max heart rate between those who do and don't have a heart diesease. 
+                 #            This tab explains how does the average resting blood pressure, cholesterol, and max heart rate differ between those who 
+                 #            do and don't have a heart disease?" ,
+                 #            style = "color: rgb(41,41,41)"),
+                 #          p("The bar chart tab allows the user to choose the pain type and what they want to compare it to and will be shown a bar chart 
+                 #            of their selection. This tabe explains how the different types of chest pain (ASY, ATA, NAP, TA) effect the average cholesterol in a person?" ,
+                 #            style = "color: rgb(41,41,41)")
+                 #          ),
                  
                  # CHART 1 PANEL
                  tabPanel(
@@ -93,8 +127,8 @@ ui <- navbarPage("Final Deliverable",
                          style = "color: Blue" ),
                        plotlyOutput("plot_2"),
                        h3("So... what does this distribution tell us?"),
-                       p("For cholesterol levels and resting heart rate, males tend to have a slighlty higher median than females. 
-                         However, the median heart rate for males is slightly lower than females. It is also worth noting that
+                       p("For cholesterol levels and resting heart rate, females tend to have a slighlty higher median than males. 
+                         However, the median max heart rate is equal for males and females. It is also worth noting that
                          males have more variation since there are more outliers in the male distrubtions for all three variables." ,
                          style = "color: Red")
                      )
@@ -141,7 +175,13 @@ ui <- navbarPage("Final Deliverable",
                  
                  tabPanel("Summary",
                           h1("Major Takeaways"),
-                          p("")),
+                          h3("Scatter Plot Comparing Age to Resting Blood Pressure or Age to Cholesterol"),
+                          p("From our interactive scatter plot, we found that there was no noticeable correlation between the age of a person and their resting blood pressure or cholesterol level. The scatter plot allowed the user to input the age range they would like to examine and then choose the variable they would like to compare it to (resting blood pressure or cholesterol). The scatterplot is useful in this situation as it allows the user to visualize the ranges of the variable they chose for each age and can easily see if there is or isn’t a correlation between age and the variable."),
+                          h3("Distribution of Health Characteristics by Sex"),
+                          p("From our interactive box plot, we are able to find the median, first quartile, third quartile, minimum, maximum, and any outliers. The boxplot showed us that Females have a higher median resting heart rate and cholesterol levels than males. We also found that the median max heart rate for males and females is equal. The box plot also showed us that males tended to have more variation as there were more male outliers than females."),
+                          h3("Health Characteristics for Different Types of Angina"),
+                          p("From our interactive bar chart, we are able to choose a category (average cholesterol, average resting blood pressure, number of people) and compare it between the four different angina types (ASY, ATA, NAP, TA). We found that the chest pain type with the highest average cholesterol is ATA, the chest pain type with the highest average resting blood pressure is TA, the chest pain type with the highest number of people is ASY. Overall the differences between the pain type for the average cholesterol and resting blood pressure are quite similar, but significantly more people have ASY chest pains.")
+                          ),
 )
 
 
